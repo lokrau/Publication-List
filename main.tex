@@ -1,0 +1,93 @@
+\documentclass{article}
+
+\usepackage{Code/Styling}
+\usepackage[backend=biber,style=authoryear,sorting=ydnt, dashed=false]{biblatex}
+
+\setlength{\bibitemsep}{0.6\baselineskip}
+
+\addbibresource{bib_files/publications.bib}
+\addbibresource{bib_files/thesis.bib}
+\addbibresource{bib_files/projects.bib}
+
+% Print annotation right under each item
+\renewbibmacro*{finentry}{%
+  \finentry
+  \iffieldundef{annotation}
+    {}
+    {\par\smallskip
+     \begingroup
+       \small
+       \leftskip=1.5em
+       \noindent\textbf{Short description: }\printfield{annotation}\par
+     \endgroup}%
+}
+
+
+\begin{document}
+\pagenumbering{gobble}
+
+
+% ===== Header =====
+\begin{center}
+  {\LARGE\bfseries Example Bob}\par
+  \vspace{0.25em}
+  \normalsize
+  example.bob@email.com \;\textbar\; +49 123 4567890
+\end{center}
+
+\vspace{0em}
+\hrule
+\vspace{0.2em}
+
+
+% ===== Publications =====
+\subsection*{Publications}
+\begin{refsection}[bib_files/publications.bib]
+  \nocite{*}
+  \printbibliography[heading=none]
+\end{refsection}
+
+
+% ===== Theses =====
+\subsection*{Theses}
+\begin{refsection}[bib_files/thesis.bib]
+  \nocite{*}
+  \printbibliography[heading=none]
+\end{refsection}
+
+
+% ===== Projects =====
+\subsection*{Projects}
+\begin{refsection}[bib_files/projects.bib]
+  \nocite{*}
+  \printbibliography[heading=none]
+\end{refsection}
+
+\subsection*{References}
+\begingroup
+\noindent
+\textit{Steven Beispiel}
+
+Lecturer / Assistant Professor\par
+Example University\par
+\texttt{steven.beispiel@exampleuniversity.ie}
+\par
+\endgroup
+
+\vspace{0.8em}
+
+\begingroup
+\noindent
+\textit{Tim Exemple}
+
+Director, Innovation Lab\par
+Awesome Company\par
+ABC Conference Fellow\par
+\texttt{tim.exemple@awesomecompany.com}
+\par
+\endgroup
+
+
+
+
+\end{document}

@@ -1,0 +1,61 @@
+# Core LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.nav
+*.snm
+
+# Bibliography / citations
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# Indexing
+*.idx
+*.ilg
+*.ind
+*.ist
+
+# Glossaries / acronyms
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.glsdefs
+
+# TikZ / PGF
+*.tikz
+*.auxlock
+
+# Latexmk
+.latexmkrc
+
+# Output files (usually generated)
+*.dvi
+*.ps
+
+# Temporary / backup files
+*~
+*.bak
+*.swp
+*.swo
+
+# Build directories
+/build/
+/out/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
